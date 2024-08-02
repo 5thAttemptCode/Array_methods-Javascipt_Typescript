@@ -3,12 +3,12 @@
 // It wants to quickly find the last product that is out of stock to prioritize restocking efforts.
 
 
-type InventoryItem = {
+interface Product {
   product: string
   inStock: boolean
 }
 
-const inventory: InventoryItem[] = [
+const inventory: Product[] = [
   { product: "Breitling Chronomat", inStock: true },
   { product: "Breitling Navtimer", inStock: true },
   { product: "Breitling Avenger", inStock: false },
@@ -16,14 +16,13 @@ const inventory: InventoryItem[] = [
   { product: "Breitling Superocean", inStock: true }
 ]
 
-const outOfStockProduct: InventoryItem | undefined = inventory.findLast(item => !item.inStock)
+const outOfStockProduct = inventory.findLast(item => !item.inStock)
 
 if (outOfStockProduct) {
   console.log(`The last out-of-stock product is: ${outOfStockProduct.product}`)
 } else {
   console.log("All products are in stock.")
 }
-
 
 // Result
 // "The last out-of-stock product is: Breitling Top Time"
