@@ -1,0 +1,1 @@
+A collection of array methods written in JavaScript and TypeScript, each with a scenario to illustrate their use. This guide provides clear examples and explanations, helping developers understand how to work with arrays for tasks like filtering, transforming, and sorting data in real-world applications.
